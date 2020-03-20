@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">Time &amp; Tide</string>
+
+    <!-- navigation drawer -->
+    <string name="activity_main_nav_drawer_open">Open navigation drawer</string>
+    <string name="activity_main_nav_drawer_close">Close navigation drawer</string>
+    <string name="activity_main_nav_header_title">Time &amp; Tide </string>
+    <string name="activity_main_nav_header_subtitle">Your Personal Timekeeper</string>
+
+    <!-- nav group home -->
+    <string name="activity_main_nav_item_dashboard_title">Dashboard</string>
+    <string name="activity_main_nav_item_analysis_title">Analysis</string>
+
+    <!-- options menu -->
+    <string name="activity_main_action_settings_title">Settings</string>
+
+    <!-- add habit dialog -->
+    <string name="fragment_dashboard_today_add_habit_prompt_title">Add a New Habit</string>
+    <string name="fragment_dashboard_today_add_habit_prompt_negative_button_text">Cancel</string>
+    <string name="fragment_dashboard_today_add_habit_prompt_positive_button_text">Save</string>
+    <string name="dialog_add_habit_tv_name_text">Habit Name</string>
+    <string name="dialog_add_habit_tv_time_text">Habit Time</string>
+    <string name="dialog_add_habit_tv_alarm_text">Alarm</string>
+    <string name="dialog_add_habit_sw_duration_text">Habit Duration</string>
+    <string name="dialog_add_habit_tv_timer_text">Timer</string>
+    <string name="dialog_add_habit_sp_duration_unit_prompt">Select a duration unit</string>
+    <string-array name="dialog_add_habit_sp_duration_unit_items">
+        <item>second(s)</item>
+        <item>minute(s)</item>
+        <item>hour(s)</item>
+    </string-array>
+
+    <!-- edit habit dialog -->
+    <string name="fragment_dashboard_today_edit_habit_prompt_title">Edit Habit</string>
+    <string name="fragment_dashboard_today_edit_habit_prompt_neutral_button_text">Delete</string>
+    <string name="fragment_dashboard_today_edit_habit_prompt_negative_button_text">Cancel</string>
+    <string name="fragment_dashboard_today_edit_habit_prompt_positive_button_text">Update</string>
+    <string name="dialog_edit_habit_tv_name_text">Habit Name</string>
+    <string name="dialog_edit_habit_tv_time_text">Habit Time</string>
+    <string name="dialog_edit_habit_tv_alarm_text">Alarm</string>
+    <string name="dialog_edit_habit_sw_duration_text">Habit Duration</string>
+    <string name="dialog_edit_habit_sp_duration_unit_prompt">Select a duration unit</string>
+    <string name="dialog_edit_habit_tv_timer_text">Timer</string>
+    <string-array name="dialog_edit_habit_sp_duration_unit_items">
+        <item>second(s)</item>
+        <item>minute(s)</item>
+        <item>hour(s)</item>
+    </string-array>
+
+    <!-- add task dialog -->
+    <string name="fragment_dashboard_today_add_task_prompt_title">Add a New Task</string>
+    <string name="fragment_dashboard_today_add_task_prompt_negative_button_text">Cancel</string>
+    <string name="fragment_dashboard_today_add_task_prompt_positive_button_text">Save</string>
+    <string name="dialog_add_task_tv_name_text">Task Name</string>
+    <string name="dialog_add_task_tv_description_text">Task Description</string>
+    <string name="dialog_add_task_sw_due_date_text">Task Due Date</string>
+    <string name="dialog_add_task_tv_alarm_on_due_text">Alarm</string>
+    <string name="dialog_add_task_sw_start_date_text">Task Start Date</string>
+    <string name="dialog_add_task_tv_alarm_on_start_text">Alarm</string>
+    <string name="dialog_add_task_tv_parent_text">Parent</string>
+    <string name="dialog_add_task_sp_parent_prompt">Select a parent</string>
+    <string-array name="dialog_add_task_sp_parent_items">
+        <item>None</item>
+    </string-array>
+    <string name="dialog_add_task_tv_color_text">Color</string>
+    <string name="dialog_add_task_sp_color_prompt">Select a color</string>
+    <string-array name="dialog_add_task_sp_color_items">
+        <item>Gray</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Orange</item>
+        <item>Green</item>
+    </string-array>
+    <string name="dialog_add_task_tv_progress_text">Progress</string>
+
+    <!-- edit task dialog -->
+    <string name="fragment_dashboard_today_edit_task_prompt_title">Edit Task</string>
+    <string name="fragment_dashboard_today_edit_task_prompt_neutral_button_text">Delete</string>
+    <string name="fragment_dashboard_today_edit_task_prompt_negative_button_text">Cancel</string>
+    <string name="fragment_dashboard_today_edit_task_prompt_positive_button_text">Update</string>
+    <string name="dialog_edit_task_tv_name_text">Task Name</string>
+    <string name="dialog_edit_task_tv_description_text">Task Description</string>
+    <string name="dialog_edit_task_sw_due_date_text">Task Due Date</string>
+    <string name="dialog_edit_task_sw_start_date_text">Task Start Date</string>
+    <string name="dialog_edit_task_tv_alarm_on_due_text">Alarm</string>
+    <string name="dialog_edit_task_tv_alarm_on_start_text">Alarm</string>
+    <string name="dialog_edit_task_tv_parent_text">Parent</string>
+    <string name="dialog_edit_task_sp_parent_prompt">Select a parent</string>
+    <string-array name="dialog_edit_task_sp_parent_items">
+        <item>None</item>
+    </string-array>
+    <string name="dialog_edit_task_tv_color_text">Color</string>
+    <string name="dialog_edit_task_sp_color_prompt">Select a color</string>
+    <string-array name="dialog_edit_task_sp_color_items">
+        <item>Gray</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Orange</item>
+        <item>Green</item>
+    </string-array>
+    <string name="dialog_edit_task_tv_progress_text">Progress</string>
+
+</resources>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_xl"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/dialog_edit_habit_tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_md"
+            android:paddingLeft="@dimen/padding_md"
+            android:text="@string/dialog_edit_habit_tv_name_text"
+            android:textSize="@dimen/text_size_sm"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/dialog_edit_habit_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_md"
+            android:textSize="@dimen/text_size_lg"
+            app:layout_constraintTop_toBottomOf="@id/dialog_edit_habit_tv_name"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/dialog_edit_habit_tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_md"
+            android:text="@string/dialog_edit_habit_tv_time_text"
+            android:textSize="@dimen/text_size_sm"
+            app:layout_constraintTop_toTopOf="@id/dialog_edit_habit_cb_alarm"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_edit_habit_cb_alarm"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/dialog_edit_habit_tv_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_md"
+            android:text="@string/dialog_edit_habit_tv_alarm_text"
+            android:textSize="@dimen/text_size_sm"
+            app:layout_constraintTop_toTopOf="@id/dialog_edit_habit_cb_alarm"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_edit_habit_cb_alarm"
+            app:layout_constraintEnd_toStartOf="@id/dialog_edit_habit_cb_alarm"/>
+
+        <CheckBox
+            android:id="@+id/dialog_edit_habit_cb_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/dialog_edit_habit_et_name"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TimePicker
+            android:id="@+id/dialog_edit_habit_tp_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+            app:layout_constraintTop_toBottomOf="@id/dialog_edit_habit_tv_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/dialog_edit_habit_cl_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_md"
+            android:paddingBottom="@dimen/padding_md"
+            app:layout_constraintTop_toBottomOf="@id/dialog_edit_habit_tp_time">
+
+            <Switch
+                android:id="@+id/dialog_edit_habit_sw_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_md"
+                android:text="@string/dialog_edit_habit_sw_duration_text"
+                android:textSize="@dimen/text_size_sm"
+                android:textColor="@color/textPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <EditText
+                android:id="@+id/dialog_edit_habit_et_duration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_md"
+                android:inputType="number"
+                android:text="10"
+                android:textSize="@dimen/text_size_lg"
+                android:enabled="false"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@id/dialog_edit_habit_cb_timer"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_edit_habit_cb_timer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/dialog_edit_habit_sp_duration_unit"/>
+
+            <Spinner
+                android:id="@+id/dialog_edit_habit_sp_duration_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/dialog_edit_habit_sp_duration_unit_items"
+                android:prompt="@string/dialog_edit_habit_sp_duration_unit_prompt"
+                android:textSize="@dimen/text_size_sm"
+                android:enabled="false"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@id/dialog_edit_habit_cb_timer"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_edit_habit_cb_timer"
+                app:layout_constraintEnd_toStartOf="@id/dialog_edit_habit_tv_timer"/>
+
+            <TextView
+                android:id="@+id/dialog_edit_habit_tv_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_md"
+                android:text="@string/dialog_edit_habit_tv_timer_text"
+                android:textSize="@dimen/text_size_sm"
+                android:enabled="false"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@id/dialog_edit_habit_cb_timer"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_edit_habit_cb_timer"
+                app:layout_constraintEnd_toStartOf="@id/dialog_edit_habit_cb_timer"/>
+
+            <CheckBox
+                android:id="@+id/dialog_edit_habit_cb_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_md"
+                android:paddingBottom="@dimen/padding_md"
+                android:enabled="false"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/dialog_edit_habit_sw_duration"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

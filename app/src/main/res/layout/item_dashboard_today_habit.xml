@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dashboard_today_habit_item_height">
+
+    <TextView
+        android:id="@+id/item_dashboard_today_habit_tv_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text=""
+        android:textSize="@dimen/text_size_lg"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_dashboard_today_habit_cl_item"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/item_dashboard_today_habit_cl_item"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/margin_lg"
+        android:background="@drawable/bg_rounded_md_padding"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".8"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/item_dashboard_today_habit_ll_item"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".75"
+            app:layout_constraintTop_toTopOf="@id/item_dashboard_today_habit_ll_notification"
+            app:layout_constraintBottom_toBottomOf="@id/item_dashboard_today_habit_ll_notification"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/item_dashboard_today_habit_tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_xs"
+                android:paddingLeft="@dimen/padding_md"
+                android:text=""
+                android:textSize="@dimen/text_size_lg"
+                android:textColor="@color/textSecondary"/>
+
+            <TextView
+                android:id="@+id/item_dashboard_today_habit_tv_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_xs"
+                android:paddingLeft="@dimen/padding_md"
+                android:text=""
+                android:textSize="@dimen/text_size_sm"
+                android:textColor="@color/textSecondary"/>
+        </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/item_dashboard_today_habit_ll_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_dashboard_today_habit_ll_item"
+            app:layout_constraintEnd_toStartOf="@id/item_dashboard_today_habit_cb_item">
+
+            <ImageView
+                android:id="@+id/item_dashboard_today_habit_iv_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingTop="@dimen/padding_xs"
+                android:paddingRight="@dimen/padding_xs"
+                android:src="@drawable/ic_alarm_24dp"
+                android:tint="@color/background"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent=".45"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/item_dashboard_today_habit_iv_timer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingBottom="@dimen/padding_xs"
+                android:paddingRight="@dimen/padding_xs"
+                android:src="@drawable/ic_timer_24dp"
+                android:tint="@color/background"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent=".45"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <CheckBox
+            android:id="@+id/item_dashboard_today_habit_cb_item"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/margin_sm"
+            android:gravity="center"
+            android:checked="false"
+            android:buttonTint="@color/background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_dashboard_weekly_habit_ll_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/padding_md"
+    android:paddingEnd="@dimen/padding_md"
+    android:background="@drawable/bg_rounded_no_padding"
+    android:backgroundTint="@color/textPrimary"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/item_dashboard_week_habit_tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_md"
+        android:text=""
+        android:textSize="@dimen/text_size_lg"
+        android:textColor="@color/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_dashboard_week_habit_tv_sun"/>
+
+    <ProgressBar
+        android:id="@+id/item_dashboard_week_habit_pb_sun"
+        android:layout_width="@dimen/dashboard_week_pb_width"
+        android:layout_height="@dimen/dashboard_week_habit_item_height"
+        android:layout_margin="@dimen/margin_sm"
+        android:indeterminate="false"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/pb_dashboard_week_vertical"
+        android:minWidth="@dimen/dashboard_week_pb_width"
+        android:progressBackgroundTint="@color/primaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_dashboard_week_habit_tv_mon"/>
+
+    <TextView
+        android:id="@+id/item_dashboard_week_habit_tv_sun"
+        android:layout_width="@dimen/dashboard_week_tv_width"
+        android:layout_height="match_parent"
+        android:rotation="270"
+        android:textAlignment="center"
+        android:text="Sun"
+        android:textSize="@dimen/text_size_sm"
+        android:textColor="@color/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/item_dashboard_week_habit_pb_sun"/>
+
+    <ProgressBar
+        android:id="@+id/item_dashboard_week_habit_pb_mon"
+        android:layout_width="@dimen/dashboard_week_pb_width"
+        android:layout_height="@dimen/dashboard_week_habit_item_height"
+        android:layout_margin="@dimen/margin_sm"
+        android:indeterminate="false"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/pb_dashboard_week_vertical"
+        android:minWidth="@dimen/dashboard_week_pb_width"
+        android:progressBackgroundTint="@color/primaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_dashboard_week_habit_tv_tue"/>
+
+    <TextView
+        android:id="@+id/item_dashboard_week_habit_tv_mon"
+        android:layout_width="@dimen/dashboard_week_tv_width"
+        android:layout_height="match_parent"
+        android:rotation="270"
+        android:textAlignment="center"
+        android:text="Mon"
+        android:textSize="@dimen/text_size_sm"
+        android:textColor="@color/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/item_dashboard_week_habit_pb_mon"/>
+
+    <ProgressBar
+        android:id="@+id/item_dashboard_week_habit_pb_tue"
+        android:layout_width="@dimen/dashboard_week_pb_width"
+        android:layout_height="@dimen/dashboard_week_habit_item_height"
+        android:layout_margin="@dimen/margin_sm"
+        android:indeterminate="false"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/pb_dashboard_week_vertical"
+        android:minWidth="@dimen/dashboard_week_pb_width"
+        android:progressBackgroundTint="@color/primaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_dashboard_week_habit_tv_wed"/>
+
+    <TextView
+        android:id="@+id/item_dashboard_week_habit_tv_tue"
+        android:layout_width="@dimen/dashboard_week_tv_width"
+        android:layout_height="match_parent"
+        android:rotation="270"
+        android:textAlignment="center"
+        android:text="Tue"
+        android:textSize="@dimen/text_size_sm"
+        android:textColor="@color/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/item_dashboard_week_habit_pb_tue"/>
+
+    <ProgressBar
+        android:id="@+id/item_dashboard_week_habit_pb_wed"
+        android:layout_width="@dimen/dashboard_week_pb_width"
+        android:layout_height="@dimen/dashboard_week_habit_item_height"
+        android:layout_margin="@dimen/margin_sm"
+        android:indeterminate="false"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/pb_dashboard_week_vertical"
+        android:minWidth="@dimen/dashboard_week_pb_width"
+        android:progressBackgroundTint="@color/primaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_dashboard_week_habit_tv_thu"/>
+
+    <TextView
+        android:id="@+id/item_dashboard_week_habit_tv_wed"
+        android:layout_width="@dimen/dashboard_week_tv_width"
+        android:layout_height="match_parent"
+        android:rotation="270"
+        android:textAlignment="center"
+        android:text="Wed"
+        android:textSize="@dimen/text_size_sm"
+        android:textColor="@color/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/item_dashboard_week_habit_pb_wed"/>
+
+    <ProgressBar
+        android:id="@+id/item_dashboard_week_habit_pb_thu"
+        android:layout_width="@dimen/dashboard_week_pb_width"
+        android:layout_height="@dimen/dashboard_week_habit_item_height"
+        android:layout_margin="@dimen/margin_sm"
+        android:indeterminate="false"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/pb_dashboard_week_vertical"
+        android:minWidth="@dimen/dashboard_week_pb_width"
+        android:progressBackgroundTint="@color/primaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_dashboard_week_habit_tv_fri"/>
+
+    <TextView
+        android:id="@+id/item_dashboard_week_habit_tv_thu"
+        android:layout_width="@dimen/dashboard_week_tv_width"
+        android:layout_height="match_parent"
+        android:rotation="270"
+        android:textAlignment="center"
+        android:text="Thu"
+        android:textSize="@dimen/text_size_sm"
+        android:textColor="@color/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/item_dashboard_week_habit_pb_thu"/>
+
+    <ProgressBar
+        android:id="@+id/item_dashboard_week_habit_pb_fri"
+        android:layout_width="@dimen/dashboard_week_pb_width"
+        android:layout_height="@dimen/dashboard_week_habit_item_height"
+        android:layout_margin="@dimen/margin_sm"
+        android:indeterminate="false"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/pb_dashboard_week_vertical"
+        android:minWidth="@dimen/dashboard_week_pb_width"
+        android:progressBackgroundTint="@color/primaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_dashboard_week_habit_tv_sat"/>
+
+    <TextView
+        android:id="@+id/item_dashboard_week_habit_tv_fri"
+        android:layout_width="@dimen/dashboard_week_tv_width"
+        android:layout_height="match_parent"
+        android:rotation="270"
+        android:textAlignment="center"
+        android:text="Fri"
+        android:textSize="@dimen/text_size_sm"
+        android:textColor="@color/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/item_dashboard_week_habit_pb_fri"/>
+
+    <ProgressBar
+        android:id="@+id/item_dashboard_week_habit_pb_sat"
+        android:layout_width="@dimen/dashboard_week_pb_width"
+        android:layout_height="@dimen/dashboard_week_habit_item_height"
+        android:layout_margin="@dimen/margin_sm"
+        android:indeterminate="false"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/pb_dashboard_week_vertical"
+        android:minWidth="@dimen/dashboard_week_pb_width"
+        android:progressBackgroundTint="@color/primaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/item_dashboard_week_habit_tv_sat"
+        android:layout_width="@dimen/dashboard_week_tv_width"
+        android:layout_height="match_parent"
+        android:rotation="270"
+        android:textAlignment="center"
+        android:text="Sat"
+        android:textSize="@dimen/text_size_sm"
+        android:textColor="@color/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/item_dashboard_week_habit_pb_sat"/>
+
+</android.support.constraint.ConstraintLayout>

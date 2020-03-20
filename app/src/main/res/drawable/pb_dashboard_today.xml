@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:gravity="center_vertical|fill_horizontal">
+        <shape
+            android:shape="rectangle"
+            android:tint="?attr/colorControlNormal">
+            <corners
+                android:radius="@dimen/background_corner_radius"/>
+            <size
+                android:height="@dimen/dashboard_today_habit_item_height" />
+            <solid
+                android:color="@color/primaryDark" />
+        </shape>
+    </item>
+    <item
+        android:id="@android:id/progress"
+        android:gravity="center_vertical|fill_horizontal">
+        <scale
+            android:scaleWidth="100%">
+            <shape
+                android:shape="rectangle"
+                android:tint="?attr/colorControlActivated">
+                <corners
+                    android:radius="@dimen/background_corner_radius"/>
+                <size
+                    android:height="@dimen/dashboard_today_habit_item_height" />
+                <solid
+                    android:color="@color/accent" />
+            </shape>
+        </scale>
+    </item>
+</layer-list>

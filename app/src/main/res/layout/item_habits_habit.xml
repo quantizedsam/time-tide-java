@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_habits_habit_ll_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/habits_habit_item_height"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/bg_rounded_no_padding"
+    android:backgroundTint="@color/accent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_habits_habit_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_xs"
+        android:paddingLeft="@dimen/padding_md"
+        android:text=""
+        android:textSize="@dimen/text_size_lg"
+        android:textColor="@color/background"/>
+
+    <TextView
+        android:id="@+id/item_habits_habit_tv_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_md"
+        android:text=""
+        android:textSize="@dimen/text_size_sm"
+        android:textColor="@color/background"/>
+
+</LinearLayout>

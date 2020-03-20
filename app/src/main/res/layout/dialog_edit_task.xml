@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_xl"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/dialog_edit_task_tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_md"
+            android:paddingLeft="@dimen/padding_md"
+            android:text="@string/dialog_edit_task_tv_name_text"
+            android:textSize="@dimen/text_size_sm"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/dialog_edit_task_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_md"
+            android:textSize="@dimen/text_size_lg"
+            app:layout_constraintTop_toBottomOf="@id/dialog_edit_task_tv_name"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/dialog_edit_task_tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_md"
+            android:paddingLeft="@dimen/padding_md"
+            android:text="@string/dialog_edit_task_tv_description_text"
+            android:textSize="@dimen/text_size_sm"
+            app:layout_constraintTop_toBottomOf="@id/dialog_edit_task_et_name"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/dialog_edit_task_et_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_md"
+            android:textSize="@dimen/text_size_lg"
+            app:layout_constraintTop_toBottomOf="@id/dialog_edit_task_tv_description"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/dialog_edit_task_cl_due_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_md"
+            android:paddingBottom="@dimen/padding_md"
+            app:layout_constraintTop_toBottomOf="@id/dialog_edit_task_et_description">
+
+            <Switch
+                android:id="@+id/dialog_edit_task_sw_due_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_md"
+                android:text="@string/dialog_edit_task_sw_due_date_text"
+                android:textSize="@dimen/text_size_sm"
+                android:textColor="@color/textPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <DatePicker
+                android:id="@+id/dialog_edit_task_dp_due_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_md"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:enabled="false"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/dialog_edit_task_sw_due_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/dialog_edit_task_tv_alarm_on_due"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_md"
+                android:text="@string/dialog_edit_task_tv_alarm_on_due_text"
+                android:textSize="@dimen/text_size_sm"
+                android:enabled="false"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@id/dialog_edit_task_cb_alarm_on_due"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_edit_task_cb_alarm_on_due"
+                app:layout_constraintEnd_toStartOf="@id/dialog_edit_task_cb_alarm_on_due"/>
+
+            <CheckBox
+                android:id="@+id/dialog_edit_task_cb_alarm_on_due"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/dialog_edit_task_dp_due_date"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/dialog_edit_task_cl_start_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_md"
+            android:paddingBottom="@dimen/padding_md"
+            app:layout_constraintTop_toBottomOf="@id/dialog_edit_task_cl_due_date">
+
+            <Switch
+                android:id="@+id/dialog_edit_task_sw_start_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_md"
+                android:text="@string/dialog_edit_task_sw_start_date_text"
+                android:textSize="@dimen/text_size_sm"
+                android:textColor="@color/textPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <DatePicker
+                android:id="@+id/dialog_edit_task_dp_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_md"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:enabled="false"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/dialog_edit_task_sw_start_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/dialog_edit_task_tv_alarm_on_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_md"
+                android:text="@string/dialog_edit_task_tv_alarm_on_start_text"
+                android:textSize="@dimen/text_size_sm"
+                android:enabled="false"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@id/dialog_edit_task_cb_alarm_on_start"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_edit_task_cb_alarm_on_start"
+                app:layout_constraintEnd_toStartOf="@id/dialog_edit_task_cb_alarm_on_start"/>
+
+            <CheckBox
+                android:id="@+id/dialog_edit_task_cb_alarm_on_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/dialog_edit_task_dp_start_date"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/dialog_edit_task_tv_parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_md"
+            android:text="@string/dialog_edit_task_tv_parent_text"
+            android:textSize="@dimen/text_size_sm"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".3"
+            app:layout_constraintTop_toTopOf="@id/dialog_edit_task_sp_parent"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_edit_task_sp_parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Spinner
+            android:id="@+id/dialog_edit_task_sp_parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_md"
+            android:paddingBottom="@dimen/padding_md"
+            android:textSize="@dimen/text_size_sm"
+            android:entries="@array/dialog_edit_task_sp_parent_items"
+            android:prompt="@string/dialog_edit_task_sp_parent_prompt"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".7"
+            app:layout_constraintTop_toBottomOf="@id/dialog_edit_task_cl_start_date"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/dialog_edit_task_tv_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_md"
+            android:text="@string/dialog_edit_task_tv_color_text"
+            android:textSize="@dimen/text_size_sm"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".3"
+            app:layout_constraintTop_toTopOf="@id/dialog_edit_task_sp_color"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_edit_task_sp_color"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Spinner
+            android:id="@+id/dialog_edit_task_sp_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_md"
+            android:paddingBottom="@dimen/padding_md"
+            android:textSize="@dimen/text_size_sm"
+            android:entries="@array/dialog_edit_task_sp_color_items"
+            android:prompt="@string/dialog_edit_task_sp_color_prompt"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".7"
+            app:layout_constraintTop_toBottomOf="@id/dialog_edit_task_sp_parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/dialog_edit_task_tv_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_md"
+            android:text="@string/dialog_edit_task_tv_progress_text"
+            android:textSize="@dimen/text_size_sm"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".3"
+            app:layout_constraintTop_toTopOf="@id/dialog_edit_task_sb_progress"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_edit_task_sb_progress"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <SeekBar
+            android:id="@+id/dialog_edit_task_sb_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_md"
+            android:paddingBottom="@dimen/padding_md"
+            android:textSize="@dimen/text_size_sm"
+            android:min="0"
+            android:max="100"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".55"
+            app:layout_constraintTop_toBottomOf="@id/dialog_edit_task_sp_color"
+            app:layout_constraintStart_toEndOf="@id/dialog_edit_task_tv_progress"
+            app:layout_constraintEnd_toStartOf="@id/dialog_edit_task_tv_percent"/>
+
+        <TextView
+            android:id="@+id/dialog_edit_task_tv_percent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/padding_md"
+            android:gravity="right"
+            android:text=""
+            android:textSize="@dimen/text_size_sm"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintTop_toTopOf="@id/dialog_edit_task_sb_progress"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_edit_task_sb_progress"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

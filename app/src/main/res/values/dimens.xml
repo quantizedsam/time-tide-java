@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- margin -->
+    <dimen name="margin_xl">16dp</dimen>
+    <dimen name="margin_lg">12dp</dimen>
+    <dimen name="margin_md">8dp</dimen>
+    <dimen name="margin_sm">6dp</dimen>
+    <dimen name="margin_xs">4dp</dimen>
+
+    <!-- padding -->
+    <dimen name="padding_xl">16dp</dimen>
+    <dimen name="padding_lg">12dp</dimen>
+    <dimen name="padding_md">8dp</dimen>
+    <dimen name="padding_sm">6dp</dimen>
+    <dimen name="padding_xs">4dp</dimen>
+
+    <!-- text size -->
+    <dimen name="text_size_xl">18dp</dimen>
+    <dimen name="text_size_lg">16dp</dimen>
+    <dimen name="text_size_md">14dp</dimen>
+    <dimen name="text_size_sm">12dp</dimen>
+    <dimen name="text_size_xs">10dp</dimen>
+
+    <!-- common dimens -->
+    <dimen name="background_corner_radius">4dp</dimen>
+
+    <!-- activity_main -->
+    <dimen name="activity_main_toolbar_height">48dp</dimen>
+    <dimen name="activity_main_nav_header_height">92dp</dimen>
+
+    <!-- fragment_dashboard_today -->
+    <dimen name="dashboard_today_habit_item_height">64dp</dimen>
+    <dimen name="dashboard_today_task_item_height">64dp</dimen>
+
+    <!-- fragment_dashboard_week -->
+    <dimen name="dashboard_week_habit_item_height">64dp</dimen>
+    <dimen name="dashboard_week_tv_width">28dp</dimen>
+    <dimen name="dashboard_week_pb_width">28dp</dimen>
+    <dimen name="dashboard_week_pb_height">48dp</dimen>
+
+    <!-- fragment_habits -->
+    <dimen name="habits_habit_item_height">48dp</dimen>
+
+</resources>

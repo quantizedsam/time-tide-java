@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/fragment_dashboard_today_ll_tasks"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/fragment_dashboard_today_ll_habits">
+
+        <ImageView
+            android:id="@+id/fragment_dashboard_today_iv_tasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_md"
+            android:layout_marginBottom="@dimen/margin_xs"
+            android:src="@drawable/ic_tasks_filled_48dp"
+            android:tint="@color/backgroundDark"/>
+
+        <TextView
+            android:id="@+id/fragment_dashboard_today_tv_tasks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="@dimen/margin_md"
+            android:textColor="@color/backgroundDark"
+            android:text="Tasks"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_dashboard_today_ll_habits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fragment_dashboard_today_ll_tasks"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/fragment_dashboard_today_iv_habits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_md"
+            android:layout_marginBottom="@dimen/margin_xs"
+            android:src="@drawable/ic_habits_48dp"
+            android:tint="@color/textPrimary"/>
+
+        <TextView
+            android:id="@+id/fragment_dashboard_today_tv_habits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="@dimen/margin_md"
+            android:textColor="@color/textPrimary"
+            android:text="Habits"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/fragment_dashboard_today_lv_details"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/padding_md"
+        android:divider="@null"
+        android:dividerHeight="@dimen/margin_sm"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/textPrimary"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@id/fragment_dashboard_today_ll_tasks"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </ListView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fragment_dashboard_today_fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_xl"
+        android:src="@drawable/ic_add_circular_filled_24dp"
+        android:tint="@color/background"
+        app:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
