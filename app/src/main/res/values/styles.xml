@@ -1,30 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- day theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+        <!-- inverted text -->
+        <!-- nv header text -->
+        <item name="color">@color/gray100</item>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryDark">@color/primaryDark</item>
-        <item name="colorAccent">@color/accent</item>
-        <item name="android:textColor">@color/textPrimary</item>
-        <item name="android:textColorPrimary">@color/textPrimary</item>
-        <item name="android:windowLightStatusBar">false</item>
+        <!-- fab icon -->
+        <!-- tab indicator -->
+        <item name="colorAccent">@color/gray900</item>
+
+        <!-- app bar background -->
+        <!-- tab background -->
+        <item name="colorPrimary">@color/gray700</item>
+
+        <!-- inverted background -->
+        <!-- nv header background -->
+        <item name="colorPrimaryDark">@color/gray700</item>
+
+        <!-- default unselected item icon -->
+        <!-- nv unselected item icon -->
+        <item name="colorSecondary">@color/gray300</item>
+
+        <!-- default background -->
+        <!-- toolbar background -->
+        <item name="android:background">@color/gray100</item>
+
+        <!-- default selected item icon and text -->
+        <!-- default text -->
+        <!-- toolbar text -->
+        <!-- nv selected item icon and text -->
+        <item name="android:textColor">@color/gray700</item>
+
+        <!-- default unselected item text -->
+        <!-- fab icon ripple -->
+        <!-- nv unselected item text -->
+        <item name="android:textColorPrimary">@color/gray500</item>
+
+        <!-- toolbar icon and text -->
+        <item name="android:textColorSecondary">@color/gray700</item>
+
+        <item name="android:textColorTertiary">@color/gray700</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
+    <!-- activity -->
+    <style name="AppTheme.Activity">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light">
+    <!-- navigation view -->
+    <style name="AppTheme.NavigationView">
+        <!-- selected item text color -->
+        <item name="colorPrimary">?android:attr/textColor</item>-->
+        <!-- unselected item text color -->
+        <!-- <item name="android:textColorPrimary">?android:attr/textColorTertiary</item> -->
+        <!-- unselected item icon color -->
+         <item name="android:textColorSecondary">?attr/colorSecondary</item>
     </style>
 
-    <style name="AppTheme.AppBarTextAppearance" parent="TextAppearance.AppCompat.Title">
+    <!-- tab layout -->
+    <style name="AppTheme.TabLayout" parent="Widget.Design.TabLayout">
+        <!-- tab background-->
+        <item name="tabBackground">?attr/colorPrimary</item>
+        <item name="tabIndicatorHeight">@dimen/fragment_tab_indicator_height</item>
+    </style>
+
+    <!-- floating action button -->
+    <style name="AppTheme.FloatingActionButton" parent="Widget.Design.FloatingActionButton">
+        <!-- fab icon -->
+        <item name="android:src">@drawable/ic_add_circular_filled_24dp</item>
+        <!-- elevation -->
+        <item name="elevation">2dp</item>
+    </style>
+
+    <!-- dashboard today habit item -->
+    <style name="AppTheme.ItemConstraintLayout">
+        <!-- item background -->
+        <item name="android:background">?attr/colorPrimaryDark</item>
+        <!-- item background tint -->
+        <item name="android:backgroundTint">?attr/colorPrimaryDark</item>
+        <!-- item background tint -->
+        <item name="android:tint">?attr/color</item>
+        <!-- check box tint -->
+        <item name="android:buttonTint">?attr/color</item>
+        <!-- text -->
+        <item name="android:textColor">?attr/color</item>
+        <!-- elevation -->
+        <item name="elevation">2dp</item>
+    </style>
+
+    <!-- title text appearance -->
+    <style name="AppTheme.TitleTextAppearance">
+        <!-- text size -->
         <item name="android:textSize">@dimen/text_size_lg</item>
-        <item name="android:textColor">@color/textPrimary</item>
-    </style>
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
     </style>
 
 </resources>
+
+<!-- for testing colors -->
+<!--    &lt;!&ndash; accent color &ndash;&gt;-->
+<!--<item name="colorAccent">@color/blue900</item>-->
+<!--    &lt;!&ndash; primary color &ndash;&gt;-->
+<!--<item name="colorPrimary">@color/green900</item>-->
+<!--    &lt;!&ndash; primary dark color &ndash;&gt;-->
+<!--<item name="colorPrimaryDark">@color/red900</item>-->
+<!--    &lt;!&ndash; background color &ndash;&gt;-->
+<!--<item name="android:background">@color/yellow900</item>-->
+<!--    &lt;!&ndash; text color &ndash;&gt;-->
+<!--<item name="android:textColor">@color/blue100</item>-->
+<!--    &lt;!&ndash; primary text color &ndash;&gt;-->
+<!--<item name="android:textColorPrimary">@color/green100</item>-->
+<!--    &lt;!&ndash; secondary text color &ndash;&gt;-->
+<!--<item name="android:textColorSecondary">@color/red100</item>-->
+<!--    &lt;!&ndash; tertiary text color &ndash;&gt;-->
+<!--<item name="android:textColorTertiary">@color/yellow100</item>-->

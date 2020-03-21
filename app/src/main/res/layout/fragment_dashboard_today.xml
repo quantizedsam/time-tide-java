@@ -25,7 +25,7 @@
             android:layout_marginTop="@dimen/margin_md"
             android:layout_marginBottom="@dimen/margin_xs"
             android:src="@drawable/ic_tasks_filled_48dp"
-            android:tint="@color/backgroundDark"/>
+            android:tint="?android:attr/textColor"/>
 
         <TextView
             android:id="@+id/fragment_dashboard_today_tv_tasks"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_marginBottom="@dimen/margin_md"
-            android:textColor="@color/backgroundDark"
+            android:textColor="?android:attr/textColor"
             android:text="Tasks"/>
 
     </LinearLayout>
@@ -57,7 +57,7 @@
             android:layout_marginTop="@dimen/margin_md"
             android:layout_marginBottom="@dimen/margin_xs"
             android:src="@drawable/ic_habits_48dp"
-            android:tint="@color/textPrimary"/>
+            android:tint="?android:attr/textColor"/>
 
         <TextView
             android:id="@+id/fragment_dashboard_today_tv_habits"
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_marginBottom="@dimen/margin_md"
-            android:textColor="@color/textPrimary"
+            android:textColor="?android:attr/textColor"
             android:text="Habits"/>
 
     </LinearLayout>
@@ -74,7 +74,7 @@
         android:id="@+id/fragment_dashboard_today_lv_details"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="@dimen/padding_md"
+        android:layout_margin="@dimen/margin_xs"
         android:divider="@null"
         android:dividerHeight="@dimen/margin_sm"
         android:gravity="center"
@@ -95,8 +95,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_xl"
         android:src="@drawable/ic_add_circular_filled_24dp"
-        android:tint="@color/background"
-        app:elevation="2dp"
+        android:tint="?android:attr/background"
+        app:rippleColor="?android:attr/textColorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

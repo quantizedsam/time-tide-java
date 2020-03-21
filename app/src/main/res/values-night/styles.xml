@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- night theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+        <item name="color">@color/gray200</item>
+        <item name="colorAccent">@color/gray100</item>
+        <item name="colorPrimary">@color/gray800</item>
+        <item name="colorPrimaryDark">@color/gray800</item>
+        <item name="colorSecondary">@color/gray700</item>
+        <item name="android:background">@color/gray900</item>
+        <item name="android:textColor">@color/gray300</item>
+        <item name="android:textColorPrimary">@color/gray500</item>
+        <item name="android:textColorSecondary">@color/gray300</item>
+        <item name="android:textColorTertiary">@color/gray300</item>
+    </style>
+</resources>

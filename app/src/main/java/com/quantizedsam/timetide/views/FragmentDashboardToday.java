@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -13,6 +14,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.graphics.ColorUtils;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -654,12 +656,16 @@ public class FragmentDashboardToday extends Fragment implements InterfaceDashboa
     public void toggleHabitsStatus(boolean selected) {
         isHabitsSelected = selected;
         if(selected) {
-            ivHabits.setImageTintList(ColorStateList.valueOf(ContextCompat.getColor(mContext, R.color.textPrimary)));
-            tvHabits.setTextColor(ContextCompat.getColor(mContext, R.color.textPrimary));
+            TypedValue typedValue = new TypedValue();
+            mContext.getTheme().resolveAttribute(android.R.attr.textColor, typedValue, true);
+            ivHabits.setImageTintList(ColorStateList.valueOf(typedValue.data));
+            tvHabits.setTextColor(typedValue.data);
         }
         else {
-            ivHabits.setImageTintList(ColorStateList.valueOf(ContextCompat.getColor(mContext, R.color.backgroundDark)));
-            tvHabits.setTextColor(ContextCompat.getColor(mContext, R.color.backgroundDark));
+            TypedValue typedValue = new TypedValue();
+            mContext.getTheme().resolveAttribute(R.attr.colorSecondary, typedValue, true);
+            ivHabits.setImageTintList(ColorStateList.valueOf(typedValue.data));
+            tvHabits.setTextColor(typedValue.data);
         }
     }
 
@@ -667,12 +673,16 @@ public class FragmentDashboardToday extends Fragment implements InterfaceDashboa
     public void toggleTasksStatus(boolean selected) {
         isTasksSelected = selected;
         if(selected) {
-            ivTasks.setImageTintList(ColorStateList.valueOf(ContextCompat.getColor(mContext, R.color.textPrimary)));
-            tvTasks.setTextColor(ContextCompat.getColor(mContext, R.color.textPrimary));
+            TypedValue typedValue = new TypedValue();
+            mContext.getTheme().resolveAttribute(android.R.attr.textColor, typedValue, true);
+            ivTasks.setImageTintList(ColorStateList.valueOf(typedValue.data));
+            tvTasks.setTextColor(typedValue.data);
         }
         else {
-            ivTasks.setImageTintList(ColorStateList.valueOf(ContextCompat.getColor(mContext, R.color.backgroundDark)));
-            tvTasks.setTextColor(ContextCompat.getColor(mContext, R.color.backgroundDark));
+            TypedValue typedValue = new TypedValue();
+            mContext.getTheme().resolveAttribute(R.attr.colorSecondary, typedValue, true);
+            ivTasks.setImageTintList(ColorStateList.valueOf(typedValue.data));
+            tvTasks.setTextColor(typedValue.data);
         }
     }
 
