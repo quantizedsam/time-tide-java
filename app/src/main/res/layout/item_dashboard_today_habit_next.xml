@@ -4,25 +4,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dashboard_today_task_item_height">
+    android:layout_height="@dimen/dashboard_today_habit_next_item_height">
 
     <TextView
-        android:id="@+id/item_dashboard_today_task_tv_progress"
+        android:id="@+id/item_dashboard_today_habit_tv_time"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:paddingRight="@dimen/padding_lg"
-        android:gravity="center_vertical|right"
-        android:text="100%"
+        android:gravity="center"
+        android:text=""
         android:textSize="@dimen/text_size_lg"
         android:textColor="?android:attr/textColor"
         app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent=".16"
+        app:layout_constraintWidth_percent=".2"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/item_dashboard_today_task_cl_item"/>
+        app:layout_constraintEnd_toStartOf="@id/item_dashboard_today_habit_cl_item"/>
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/item_dashboard_today_task_cl_item"
+        android:id="@+id/item_dashboard_today_habit_cl_item"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_marginEnd="@dimen/margin_md"
@@ -33,18 +33,18 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
-            android:id="@+id/item_dashboard_today_task_ll_item"
+            android:id="@+id/item_dashboard_today_habit_ll_item"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="vertical"
             app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent=".6"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent=".75"
+            app:layout_constraintTop_toTopOf="@id/item_dashboard_today_habit_ll_notification"
+            app:layout_constraintBottom_toBottomOf="@id/item_dashboard_today_habit_ll_notification"
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
-                android:id="@+id/item_dashboard_today_task_tv_name"
+                android:id="@+id/item_dashboard_today_habit_tv_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="@dimen/padding_xs"
@@ -53,7 +53,7 @@
                 android:textSize="@dimen/text_size_lg"/>
 
             <TextView
-                android:id="@+id/item_dashboard_today_task_tv_description"
+                android:id="@+id/item_dashboard_today_habit_tv_duration"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="@dimen/padding_xs"
@@ -63,39 +63,47 @@
         </LinearLayout>
 
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/item_dashboard_today_habit_cl_dates"
-            android:layout_width="0dp"
+            android:id="@+id/item_dashboard_today_habit_ll_notification"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent=".4"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/item_dashboard_today_task_ll_item"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintStart_toEndOf="@id/item_dashboard_today_habit_ll_item"
+            app:layout_constraintEnd_toStartOf="@id/item_dashboard_today_habit_cb_item">
 
-            <TextView
-                android:id="@+id/item_dashboard_today_task_tv_start_date"
+            <ImageView
+                android:id="@+id/item_dashboard_today_habit_iv_alarm"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:paddingTop="@dimen/padding_xs"
-                android:paddingRight="@dimen/padding_md"
-                android:gravity="right"
-                android:text=""
-                android:textSize="@dimen/text_size_sm"
+                android:paddingRight="@dimen/padding_xs"
+                android:src="@drawable/ic_alarm_24dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent=".45"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <TextView
-                android:id="@+id/item_dashboard_today_task_tv_due_date"
+            <ImageView
+                android:id="@+id/item_dashboard_today_habit_iv_timer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:paddingBottom="@dimen/padding_xs"
-                android:paddingRight="@dimen/padding_md"
-                android:gravity="right"
-                android:text=""
-                android:textSize="@dimen/text_size_sm"
+                android:paddingRight="@dimen/padding_xs"
+                android:src="@drawable/ic_timer_24dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent=".45"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
         </android.support.constraint.ConstraintLayout>
+
+        <CheckBox
+            android:id="@+id/item_dashboard_today_habit_cb_item"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/margin_sm"
+            android:gravity="center"
+            android:checked="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
     </android.support.constraint.ConstraintLayout>
 

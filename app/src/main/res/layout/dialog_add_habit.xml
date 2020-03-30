@@ -84,7 +84,7 @@
                 android:paddingLeft="@dimen/padding_md"
                 android:text="@string/dialog_add_habit_sw_duration_text"
                 android:textSize="@dimen/text_size_sm"
-                android:textColor="@color/textPrimary"
+                android:textColor="?android:attr/textColor"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />

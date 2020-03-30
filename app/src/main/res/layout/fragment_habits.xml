@@ -10,7 +10,7 @@
         android:layout_marginTop="@dimen/margin_md"
         android:layout_marginLeft="@dimen/margin_md"
         android:text="Select a Habit..."
-        android:textColor="@color/textSecondary"/>
+        android:textColor="?android:attr/textColorTertiary"/>
 
     <ListView
         android:id="@+id/fragment_habits_lv_details"

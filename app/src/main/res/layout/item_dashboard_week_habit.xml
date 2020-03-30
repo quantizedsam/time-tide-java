@@ -8,8 +8,7 @@
     android:layout_height="wrap_content"
     android:paddingStart="@dimen/padding_md"
     android:paddingEnd="@dimen/padding_md"
-    android:background="@drawable/bg_rounded_no_padding"
-    android:backgroundTint="@color/textPrimary"
+    android:background="@drawable/bg_item_default"
     android:orientation="horizontal">
 
     <TextView
@@ -19,7 +18,7 @@
         android:padding="@dimen/padding_md"
         android:text=""
         android:textSize="@dimen/text_size_lg"
-        android:textColor="@color/background"
+        android:textColor="?android:attr/textColorTertiary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +33,7 @@
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:progressDrawable="@drawable/pb_dashboard_week_vertical"
         android:minWidth="@dimen/dashboard_week_pb_width"
-        android:progressBackgroundTint="@color/primaryDark"
+        android:progressBackgroundTint="?android:attr/textColorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/item_dashboard_week_habit_tv_mon"/>
@@ -47,7 +46,7 @@
         android:textAlignment="center"
         android:text="Sun"
         android:textSize="@dimen/text_size_sm"
-        android:textColor="@color/background"
+        android:textColor="?android:attr/textColorTertiary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/item_dashboard_week_habit_pb_sun"/>
@@ -61,7 +60,7 @@
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:progressDrawable="@drawable/pb_dashboard_week_vertical"
         android:minWidth="@dimen/dashboard_week_pb_width"
-        android:progressBackgroundTint="@color/primaryDark"
+        android:progressBackgroundTint="?android:attr/textColorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/item_dashboard_week_habit_tv_tue"/>
@@ -74,7 +73,7 @@
         android:textAlignment="center"
         android:text="Mon"
         android:textSize="@dimen/text_size_sm"
-        android:textColor="@color/background"
+        android:textColor="?android:attr/textColorTertiary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/item_dashboard_week_habit_pb_mon"/>
@@ -88,7 +87,7 @@
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:progressDrawable="@drawable/pb_dashboard_week_vertical"
         android:minWidth="@dimen/dashboard_week_pb_width"
-        android:progressBackgroundTint="@color/primaryDark"
+        android:progressBackgroundTint="?android:attr/textColorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/item_dashboard_week_habit_tv_wed"/>
@@ -101,7 +100,7 @@
         android:textAlignment="center"
         android:text="Tue"
         android:textSize="@dimen/text_size_sm"
-        android:textColor="@color/background"
+        android:textColor="?android:attr/textColorTertiary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/item_dashboard_week_habit_pb_tue"/>
@@ -115,7 +114,7 @@
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:progressDrawable="@drawable/pb_dashboard_week_vertical"
         android:minWidth="@dimen/dashboard_week_pb_width"
-        android:progressBackgroundTint="@color/primaryDark"
+        android:progressBackgroundTint="?android:attr/textColorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/item_dashboard_week_habit_tv_thu"/>
@@ -128,7 +127,7 @@
         android:textAlignment="center"
         android:text="Wed"
         android:textSize="@dimen/text_size_sm"
-        android:textColor="@color/background"
+        android:textColor="?android:attr/textColorTertiary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/item_dashboard_week_habit_pb_wed"/>
@@ -142,7 +141,7 @@
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:progressDrawable="@drawable/pb_dashboard_week_vertical"
         android:minWidth="@dimen/dashboard_week_pb_width"
-        android:progressBackgroundTint="@color/primaryDark"
+        android:progressBackgroundTint="?android:attr/textColorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/item_dashboard_week_habit_tv_fri"/>
@@ -155,7 +154,7 @@
         android:textAlignment="center"
         android:text="Thu"
         android:textSize="@dimen/text_size_sm"
-        android:textColor="@color/background"
+        android:textColor="?android:attr/textColorTertiary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/item_dashboard_week_habit_pb_thu"/>
@@ -169,7 +168,7 @@
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:progressDrawable="@drawable/pb_dashboard_week_vertical"
         android:minWidth="@dimen/dashboard_week_pb_width"
-        android:progressBackgroundTint="@color/primaryDark"
+        android:progressBackgroundTint="?android:attr/textColorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/item_dashboard_week_habit_tv_sat"/>
@@ -182,7 +181,7 @@
         android:textAlignment="center"
         android:text="Fri"
         android:textSize="@dimen/text_size_sm"
-        android:textColor="@color/background"
+        android:textColor="?android:attr/textColorTertiary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/item_dashboard_week_habit_pb_fri"/>
@@ -196,7 +195,7 @@
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:progressDrawable="@drawable/pb_dashboard_week_vertical"
         android:minWidth="@dimen/dashboard_week_pb_width"
-        android:progressBackgroundTint="@color/primaryDark"
+        android:progressBackgroundTint="?android:attr/textColorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -209,7 +208,7 @@
         android:textAlignment="center"
         android:text="Sat"
         android:textSize="@dimen/text_size_sm"
-        android:textColor="@color/background"
+        android:textColor="?android:attr/textColorTertiary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/item_dashboard_week_habit_pb_sat"/>

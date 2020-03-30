@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/habits_habit_item_height"
     android:layout_gravity="center_vertical"
-    android:background="@drawable/bg_rounded_no_padding"
-    android:backgroundTint="@color/accent"
+    android:background="@drawable/bg_toolbar"
+    android:backgroundTint="?attr/colorAccent"
     android:orientation="vertical">
 
     <TextView
@@ -18,7 +18,7 @@
         android:paddingLeft="@dimen/padding_md"
         android:text=""
         android:textSize="@dimen/text_size_lg"
-        android:textColor="@color/background"/>
+        android:textColor="?android:attr/textColorTertiary"/>
 
     <TextView
         android:id="@+id/item_habits_habit_tv_duration"
@@ -27,6 +27,6 @@
         android:paddingLeft="@dimen/padding_md"
         android:text=""
         android:textSize="@dimen/text_size_sm"
-        android:textColor="@color/background"/>
+        android:textColor="?android:attr/textColorTertiary"/>
 
 </LinearLayout>

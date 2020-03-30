@@ -14,7 +14,7 @@
                 <size
                     android:width="@dimen/dashboard_week_pb_height"/>
                 <solid
-                    android:color="@color/primaryDark"/>
+                    android:color="?attr/colorPrimary"/>
             </shape>
         </rotate>
     </item>
@@ -34,7 +34,7 @@
                     <size
                         android:width="@dimen/dashboard_week_pb_height"/>
                     <solid
-                        android:color="@color/accent" />
+                        android:color="?attr/colorAccent" />
                 </shape>
             </scale>
         </rotate>

@@ -22,10 +22,6 @@
         <!-- nv unselected item icon -->
         <item name="colorSecondary">@color/gray300</item>
 
-        <!-- default background -->
-        <!-- toolbar background -->
-        <item name="android:background">@color/gray100</item>
-
         <!-- default selected item icon and text -->
         <!-- default text -->
         <!-- toolbar text -->
@@ -40,7 +36,9 @@
         <!-- toolbar icon and text -->
         <item name="android:textColorSecondary">@color/gray700</item>
 
-        <item name="android:textColorTertiary">@color/gray700</item>
+        <!-- default background -->
+        <!-- toolbar background -->
+        <item name="android:textColorTertiary">@color/gray100</item>
     </style>
 
     <!-- activity -->
@@ -65,6 +63,8 @@
         <!-- tab background-->
         <item name="tabBackground">?attr/colorPrimary</item>
         <item name="tabIndicatorHeight">@dimen/fragment_tab_indicator_height</item>
+        <item name="tabTextColor">?android:attr/textColorPrimary</item>
+        <item name="tabSelectedTextColor">?attr/color</item>
     </style>
 
     <!-- floating action button -->
@@ -77,11 +77,7 @@
 
     <!-- dashboard today habit item -->
     <style name="AppTheme.ItemConstraintLayout">
-        <!-- item background -->
-        <item name="android:background">?attr/colorPrimaryDark</item>
-        <!-- item background tint -->
-        <item name="android:backgroundTint">?attr/colorPrimaryDark</item>
-        <!-- item background tint -->
+        <!-- icon tint -->
         <item name="android:tint">?attr/color</item>
         <!-- check box tint -->
         <item name="android:buttonTint">?attr/color</item>

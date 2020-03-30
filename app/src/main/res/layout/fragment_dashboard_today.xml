@@ -3,6 +3,7 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="?attr/colorPrimary"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -79,7 +80,7 @@
         android:dividerHeight="@dimen/margin_sm"
         android:gravity="center"
         android:text=""
-        android:textColor="@color/textPrimary"
+        android:textColor="?android:attr/textColorTertiary"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintTop_toBottomOf="@id/fragment_dashboard_today_ll_tasks"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -95,7 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_xl"
         android:src="@drawable/ic_add_circular_filled_24dp"
-        android:tint="?android:attr/background"
+        android:tint="?android:attr/textColorTertiary"
         app:rippleColor="?android:attr/textColorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

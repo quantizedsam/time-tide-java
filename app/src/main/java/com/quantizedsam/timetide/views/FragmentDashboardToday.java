@@ -6,12 +6,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.graphics.ColorUtils;
 import android.util.Log;
 import android.util.TypedValue;
@@ -719,16 +718,85 @@ public class FragmentDashboardToday extends Fragment implements InterfaceDashboa
         public View getView(final int position, View view, @NonNull ViewGroup parent) {
             final Habit habit = getItem(position);
             Log.d(className, habit.getName() + ": " + Integer.toString(habit.getStatus()));
-            if (view == null) {
-                view = LayoutInflater.from(mContext).inflate(R.layout.item_dashboard_today_habit, parent, false);
+
+            String[] habitTimeArray = habit.getTime().split(":");
+            int habitTimeMinutes = Integer.parseInt(habitTimeArray[0])*60 + Integer.parseInt(habitTimeArray[1]);
+            SimpleDateFormat sdfCurrTime = new SimpleDateFormat("HH:mm");
+            String[] currTimeArray = sdfCurrTime.format(new Date()).split(":");
+            int currTimeMinutes = Integer.parseInt(currTimeArray[0])*60 + Integer.parseInt(currTimeArray[1]);
+            if (habitTimeMinutes > currTimeMinutes) {
+                Log.d(className, "big");
+                if (view == null) {
+                    view = LayoutInflater.from(mContext).inflate(R.layout.item_dashboard_today_habit_next, parent, false);
+                    TextView tvDuration = view.findViewById(R.id.item_dashboard_today_habit_tv_duration);
+                    final ImageView ivAlarm = view.findViewById(R.id.item_dashboard_today_habit_iv_alarm);
+                    final ImageView ivTimer = view.findViewById(R.id.item_dashboard_today_habit_iv_timer);
+
+                    int duration = habit.getDuration();
+                    if (duration == -1 || duration == 0) {
+                        tvDuration.setText("");
+                    }
+                    else if (duration % 3600 == 0) {
+                        duration /= 3600;
+                        String text = String.valueOf(duration) + " hour";
+                        if (duration != 1) {
+                            text = text + "s";
+                        }
+                        tvDuration.setText(text);
+                    }
+                    else if (duration % 60 == 0) {
+                        duration /= 60;
+                        String text = String.valueOf(duration) + " minute";
+                        if (duration != 1) {
+                            text = text + "s";
+                        }
+                        tvDuration.setText(text);
+                    }
+                    else {
+                        String text = String.valueOf(duration) + " second";
+                        if (duration != 1) {
+                            text = text + "s";
+                        }
+                        tvDuration.setText(text);
+                    }
+
+                    if (habit.isAlarmOn()) {
+                        ivAlarm.setVisibility(View.VISIBLE);
+                    }
+                    else {
+                        ivAlarm.setVisibility(View.INVISIBLE);
+                    }
+
+                    if (habit.isTimerOn()) {
+                        ivTimer.setVisibility(View.VISIBLE);
+                    }
+                    else {
+                        ivTimer.setVisibility(View.INVISIBLE);
+                    }
+                }
+            }
+            else {
+                Log.d(className, "small");
+                if (view == null) {
+                    view = LayoutInflater.from(mContext).inflate(R.layout.item_dashboard_today_habit_prev, parent, false);
+                }
+
+                ConstraintLayout clItem = view.findViewById(R.id.item_dashboard_today_habit_cl_item);
+                TypedValue typedValue = new TypedValue();
+                mContext.getTheme().resolveAttribute(R.attr.colorPrimary, typedValue, true);
+                int color = typedValue.data;
+                if(habit.getStatus() == 1) {
+                    color = ColorUtils.blendARGB(getContext().getColor(R.color.green700), color, 0.5F);
+                }
+                else {
+                    color = ColorUtils.blendARGB(getContext().getColor(R.color.red500), color, 0.5F);
+                }
+                clItem.setBackgroundTintList(ColorStateList.valueOf(color));
             }
 
             TextView tvTime = view.findViewById(R.id.item_dashboard_today_habit_tv_time);
             LinearLayout llItem = view.findViewById(R.id.item_dashboard_today_habit_ll_item);
             final TextView tvName = view.findViewById(R.id.item_dashboard_today_habit_tv_name);
-            TextView tvDuration = view.findViewById(R.id.item_dashboard_today_habit_tv_duration);
-            final ImageView ivAlarm = view.findViewById(R.id.item_dashboard_today_habit_iv_alarm);
-            final ImageView ivTimer = view.findViewById(R.id.item_dashboard_today_habit_iv_timer);
             final CheckBox cbItem = view.findViewById(R.id.item_dashboard_today_habit_cb_item);
 
             tvTime.setText(habit.getTime());
@@ -741,48 +809,6 @@ public class FragmentDashboardToday extends Fragment implements InterfaceDashboa
             });
 
             tvName.setText(habit.getName());
-
-            int duration = habit.getDuration();
-            if (duration == -1 || duration == 0) {
-                tvDuration.setText("");
-            }
-            else if (duration % 3600 == 0) {
-                duration /= 3600;
-                String text = String.valueOf(duration) + " hour";
-                if (duration != 1) {
-                    text = text + "s";
-                }
-                tvDuration.setText(text);
-            }
-            else if (duration % 60 == 0) {
-                duration /= 60;
-                String text = String.valueOf(duration) + " minute";
-                if (duration != 1) {
-                    text = text + "s";
-                }
-                tvDuration.setText(text);
-            }
-            else {
-                String text = String.valueOf(duration) + " second";
-                if (duration != 1) {
-                    text = text + "s";
-                }
-                tvDuration.setText(text);
-            }
-
-            if (habit.isAlarmOn()) {
-                ivAlarm.setVisibility(View.VISIBLE);
-            }
-            else {
-                ivAlarm.setVisibility(View.INVISIBLE);
-            }
-
-            if (habit.isTimerOn()) {
-                ivTimer.setVisibility(View.VISIBLE);
-            }
-            else {
-                ivTimer.setVisibility(View.INVISIBLE);
-            }
 
             if (habit.getStatus() == 1) {
                 cbItem.setChecked(true);
@@ -837,22 +863,23 @@ public class FragmentDashboardToday extends Fragment implements InterfaceDashboa
 
             tvProgress.setText(Integer.toString(task.getProgress()) + "%");
 
-            int color = getContext().getColor(R.color.primaryDark);
+            TypedValue typedValue = new TypedValue();
+            mContext.getTheme().resolveAttribute(R.attr.colorPrimary, typedValue, true);
+            int color = typedValue.data;
             switch(task.getColor()) {
-                case "Gray":
-                    color = getContext().getColor(R.color.gray600);
-                    break;
                 case "Red":
-                    color = ColorUtils.blendARGB(getContext().getColor(R.color.red500), getContext().getColor(R.color.gray600), 0.5F);
+                    color = ColorUtils.blendARGB(getContext().getColor(R.color.red500), color, 0.5F);
                     break;
                 case "Blue":
-                    color = ColorUtils.blendARGB(getContext().getColor(R.color.blue800), getContext().getColor(R.color.gray600), 0.5F);
+                    color = ColorUtils.blendARGB(getContext().getColor(R.color.blue800), color, 0.5F);
                     break;
                 case "Orange":
-                    color = ColorUtils.blendARGB(getContext().getColor(R.color.yellow900), getContext().getColor(R.color.gray600), 0.5F);
+                    color = ColorUtils.blendARGB(getContext().getColor(R.color.yellow900), color, 0.5F);
                     break;
                 case "Green":
-                    color = ColorUtils.blendARGB(getContext().getColor(R.color.green700), getContext().getColor(R.color.gray600), 0.5F);
+                    color = ColorUtils.blendARGB(getContext().getColor(R.color.green700), color, 0.5F);
+                    break;
+                default:
                     break;
             }
 

@@ -60,11 +60,10 @@ public class FragmentDashboard extends Fragment implements InterfaceDashboard.Vi
         ViewPager viewPager = mFragment.findViewById(R.id.fragment_dashboard_vp);
         TabsAdapter tabsAdapter = new TabsAdapter(getChildFragmentManager());
         tabsAdapter.addFragment(new FragmentDashboardToday(), "Today");
-        //tabsAdapter.addFragment(new FragmentDashboardWeek(), "Week");
+        tabsAdapter.addFragment(new FragmentDashboardWeek(), "Week");
         viewPager.setAdapter(tabsAdapter);
 
         TabLayout tabLayout = mFragment.findViewById(R.id.fragment_dashboard_tl);
-        tabLayout.setTabTextColors(ColorStateList.valueOf(ContextCompat.getColor(mContext, R.color.textSecondary)));
         tabLayout.setupWithViewPager(viewPager);
     }
 

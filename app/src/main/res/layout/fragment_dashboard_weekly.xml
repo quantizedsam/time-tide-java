@@ -24,7 +24,7 @@
             android:layout_marginTop="@dimen/margin_md"
             android:layout_marginBottom="@dimen/margin_xs"
             android:src="@drawable/ic_habits_48dp"
-            android:tint="@color/textPrimary"/>
+            android:tint="?android:attr/textColor"/>
 
         <TextView
             android:id="@+id/fragment_dashboard_weekly_tv_habits"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_marginBottom="@dimen/margin_md"
-            android:textColor="@color/textPrimary"
+            android:textColor="?android:attr/textColor"
             android:text="Habits"/>
 
     </LinearLayout>
@@ -56,7 +56,7 @@
             android:layout_marginTop="@dimen/margin_md"
             android:layout_marginBottom="@dimen/margin_xs"
             android:src="@drawable/ic_tasks_filled_48dp"
-            android:tint="@color/backgroundDark"/>
+            android:tint="?android:attr/textColor"/>
 
         <TextView
             android:id="@+id/fragment_dashboard_weekly_tv_tasks"
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_marginBottom="@dimen/margin_md"
-            android:textColor="@color/backgroundDark"
+            android:textColor="?android:attr/textColor"
             android:text="Tasks"/>
 
     </LinearLayout>
@@ -87,7 +87,7 @@
             android:layout_marginTop="@dimen/margin_md"
             android:layout_marginBottom="@dimen/margin_xs"
             android:src="@drawable/ic_alarms_48dp"
-            android:tint="@color/backgroundDark"/>
+            android:tint="?android:attr/textColor"/>
 
         <TextView
             android:id="@+id/fragment_dashboard_weekly_tv_alarms"
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_marginBottom="@dimen/margin_md"
-            android:textColor="@color/backgroundDark"
+            android:textColor="?android:attr/textColor"
             android:text="Alarms"/>
 
     </LinearLayout>
@@ -109,7 +109,7 @@
         android:dividerHeight="@dimen/margin_sm"
         android:gravity="center"
         android:text=""
-        android:textColor="@color/textPrimary"
+        android:textColor="?android:attr/textColorTertiary"
         app:layout_constraintTop_toBottomOf="@id/fragment_dashboard_weekly_ll_tasks"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
